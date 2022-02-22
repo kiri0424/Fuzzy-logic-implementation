@@ -1,11 +1,10 @@
 from turtle import speed
 import numpy as np
-Temperature = 0
-Humidity = 97
 
-print("The input temperature is:", Temperature)
-print("The input humidity is:", Humidity)
-print("\n")
+#Taking crisp inputs of temperature and humidity
+
+Temperature = int(input("Enter the Temperature: "))
+Humidity = int(input("Enter the Humidity: "))
 
 #Defining Membership Functions
 
@@ -138,8 +137,6 @@ def rule(VC,C,TN,H,VH,D,HN,W):
     svs=compare(VS)
     ss=compare(S)
     sf=compare(F)
-    print("hello")
-    print(svs,ss,sf)
 
     return svs,ss,sf
 
