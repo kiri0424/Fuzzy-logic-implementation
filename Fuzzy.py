@@ -104,6 +104,13 @@ def cmpr(a,b):
 
     return out
 
+def compare(X):
+    speed = list(filter(lambda num: num != 0, X))
+    if not speed:
+        return(0)
+    else:
+        return(min(speed))
+
 
 def rule(VC,C,TN,H,VH,D,HN,W):
 
@@ -114,7 +121,6 @@ def rule(VC,C,TN,H,VH,D,HN,W):
     VS.append(min(C,HN))
     VS.append(min(C,W))
     VS.append(min(TN,W))
-    VS = sorted(VS,key=lambda x:float(x))
 
     S = []
     S.append(min(C,D))
@@ -123,17 +129,16 @@ def rule(VC,C,TN,H,VH,D,HN,W):
     S.append(min(H,HN))
     S.append(min(H,W))
     S.append(min(VH,W))
-    S = sorted(S,key=lambda x:float(x))
-
+    
     F = []
     F.append(min(H,D))
     F.append(min(VH,D))
     F.append(min(VH,HN))
-    F=sorted(F,key=lambda x:float(x))
 
-    svs=VS[len(VS)-1]
-    ss=S[len(S)-1]
-    sf=F[len(F)-1]
+    svs=compare(VS)
+    ss=compare(S)
+    sf=compare(F)
+    print("hello")
     print(svs,ss,sf)
 
     return svs,ss,sf
