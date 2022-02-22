@@ -1,4 +1,3 @@
-from turtle import speed
 import numpy as np
 
 #Taking crisp inputs of temperature and humidity
@@ -104,11 +103,11 @@ def cmpr(a,b):
     return out
 
 def compare(X):
-    speed = list(filter(lambda num: num != 0, X))
-    if not speed:
+    spd = list(filter(lambda num: num != 0, X))
+    if not spd:
         return(0)
     else:
-        return(min(speed))
+        return(min(spd))
 
 
 def rule(VC,C,TN,H,VH,D,HN,W):
