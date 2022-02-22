@@ -2,8 +2,8 @@ import numpy as np
 
 #Taking crisp inputs of temperature and humidity
 
-Temperature = int(input("Enter the Temperature: "))
-Humidity = int(input("Enter the Humidity: "))
+Temperature = int(input("Enter the Temperature (in Celsius): "))
+Humidity = int(input("Enter the Humidity (0-100): "))
 
 #Defining Membership Functions
 
@@ -78,7 +78,7 @@ output1= [VC,C,TN,H,VH]
 output2= [D,HN,W]
 print("After Fuzzification:")
 print("Fuzzy values of temperature are:")
-print(["VeryCold","Cold","Nornal","Hot","VeryHot"])
+print(["VeryCold","Cold","Normal","Hot","VeryHot"])
 print(np.round(output1,2))
 print("Fuzzy values of Humidity are:")
 print(["Dry","Normal","Wet"])
@@ -200,4 +200,4 @@ def defuz(verySlow,slow,fast):
     return crispyresult
 
 Result = defuz(verySlow,slow,fast)
-print("\nThe speed of the motor is:",Result)
+print("\nThe speed of the motor is:",Result," RPM.")
